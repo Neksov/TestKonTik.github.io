@@ -402,7 +402,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   color: #ffffff;
-  font-size: calc(0.5rem + 0.5vw);
+  font-size: 16px;
   line-height: 25px;
 }
 
@@ -413,6 +413,10 @@ a {
 
 .plug {
   display: none;
+}
+
+p {
+  text-indent: 20px;
 }
 
 @font-face {
@@ -467,7 +471,7 @@ a {
           transform: scale(1.2);
 }
 
-ul {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,6 +479,10 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.nav__list li {
+  list-style: none;
 }
 
 .nav__item {
@@ -512,10 +520,6 @@ ul {
   display: none;
 }
 
-li {
-  list-style: none;
-}
-
 .main {
   background-color: #078;
   padding: 20px 0;
@@ -525,6 +529,32 @@ li {
   border: 2px solid #ffffff;
   height: 100%;
   padding: 20px 20px;
+}
+
+.block__title {
+  line-height: 30px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card {
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin: 10px;
+  width: 48%;
+  text-align: center;
 }
 
 #button-up {
@@ -558,6 +588,12 @@ li {
   opacity: 0.9;
 }
 
+@media screen and (min-width: 993px) and (max-width: 1080px) {
+  .card {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 992px) {
   .menu__nav {
     display: none;
@@ -574,7 +610,6 @@ li {
   }
 
   .nav__item:hover {
-    color: #000000;
     opacity: 1;
   }
 
@@ -703,6 +738,10 @@ li {
 
   li {
     padding: 10px 0;
+  }
+
+  .card {
+    width: 100%;
   }
 
   .animated {
